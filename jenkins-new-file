@@ -1,0 +1,21 @@
+pipeline{
+agent any
+environment {
+ PATH = "/opt/maven3/bin:$PATH"
+}
+     stages{
+        stage("build"){
+        steps{
+         sh  script: 'mvn clean install package'
+        }
+        }   
+     
+     }
+
+
+
+
+
+
+
+}
