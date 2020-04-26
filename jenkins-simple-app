@@ -3,6 +3,7 @@ pipeline{
        stages{
           stage(''){
           steps{
+          echo "welcome to declarative jenkins"
           }
       }
    }
