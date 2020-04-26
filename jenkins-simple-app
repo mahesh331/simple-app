@@ -1,7 +1,7 @@
 pipeline{
-       node any
+       agent any
        stages{
-          stage(''){
+          stage('welcome'){
           steps{
           echo "welcome to declarative jenkins"
           }
