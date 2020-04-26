@@ -1,10 +1,15 @@
 pipeline{
        agent any
+       tools {
+  maven 'maven3'
+       }
        stages{
-          stage('welcome'){
-          steps{
-          echo "welcome to declarative jenkins"
-          }
-      }
+         stage('build'){
+            steps{
+            sh script: 'mvn clean install package'
+            }
+            
+         }
    }
+         
 }
