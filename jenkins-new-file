@@ -12,7 +12,7 @@ environment {
         } 
         stage("deploy"){
         steps{
-        sshagent(['tomcat-new']) 
+        sshagent(['tomcat-new']) {
         sh """
        scp -o StrictHostKeyChecking=no target/webapp.war ec2-user@172.31.45.218:/opt/tomcat8/webapps/
        
